@@ -1,0 +1,6 @@
+{
+    "tables": {
+        "sales": ["id", "amount", "date", "product"],
+        "products": ["id", "name", "category"]
+    }
+}

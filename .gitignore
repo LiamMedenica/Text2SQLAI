@@ -1,0 +1,21 @@
+# Python virtual environment
+venv/
+__pycache__/
+*.pyc
+
+# Model checkpoints and large files
+training/checkpoints/
+*.bin
+*.h5
+
+# Temporary files
+*.log
+*.tmp
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Sensitive data
+*.env
+*.secret

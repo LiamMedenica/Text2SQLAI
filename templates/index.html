@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text2SQL AI Helper</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        textarea { width: 100%; height: 100px; }
+        button { margin-top: 10px; padding: 10px; }
+        #result { margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Text2SQL AI Helper</h1>
+    <p>Enter a natural language query (e.g., "Show me all sales greater than 100"):</p>
+    <textarea id="query" placeholder="Type your query here..."></textarea>
+    <button onclick="submitQuery()">Generate SQL</button>
+    <div id="result"></div>
+
+    <script>
+        async function submitQuery() {
+            const query = document.getElementById('query').value;
+            const response = await fetch('/api/text2sql', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ query })
+            });
+            const data = await response.json();
+            document.getElementById('result').innerText = data.sql || data.error;
+        }
+    </script>
+</body>
+</html>
