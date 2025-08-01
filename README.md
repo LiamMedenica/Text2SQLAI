@@ -1,5 +1,4 @@
 # Text2SQLAI
-
 A Flask-based web application that converts natural language queries into SQL using a fine-tuned T5 model and rule-based logic.
 
 ## Overview
@@ -14,7 +13,7 @@ Text2SQLAI translates user queries (e.g., "List sales where amount is less than 
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/Text2SQLAI.git
+   git clone https://github.com/LiamMedenica/Text2SQLAI.git
    cd Text2SQLAI
 
 2. Create and activate a virtual environment:
